@@ -117,6 +117,104 @@ body {
     margin-top: 3rem;
 }
 
+/* Trust Indicators */
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.trust-item {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+}
+
+.trust-item:hover {
+    transform: translateY(-5px);
+}
+
+.trust-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.trust-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4A5056;
+}
+
+.trust-indicators.highlight {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trust-indicators.highlight .trust-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    min-width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.trust-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    filter: grayscale(0.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.trust-item:hover .trust-icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.trust-desc {
+    font-size: 0.875rem;
+    color: #6C757D;
+    margin-top: 0.5rem;
+}
+
+/* Animation delays for trust items */
+.trust-item:nth-child(1) { animation-delay: 0.1s; }
+.trust-item:nth-child(2) { animation-delay: 0.2s; }
+.trust-item:nth-child(3) { animation-delay: 0.3s; }
+.trust-item:nth-child(4) { animation-delay: 0.4s; }
+
+@media (max-width: 768px) {
+    .trust-indicators {
+        gap: 1.5rem;
+    }
+    
+    .trust-indicators.highlight .trust-item {
+        min-width: 150px;
+    }
+    
+    .trust-number {
+        font-size: 2rem;
+    }
+    
+    .trust-label {
+        font-size: 0.875rem;
+    }
+}
+
 /* Button Styles */
 .btn-primary, .btn-secondary, .btn-request-access {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
