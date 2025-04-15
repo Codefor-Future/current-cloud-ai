@@ -118,6 +118,14 @@ body {
 }
 
 /* Button Styles */
+.btn-primary, .btn-secondary, .btn-request-access {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .btn-primary {
     background: #000000;
     color: #FFFFFF;
@@ -125,11 +133,6 @@ body {
     border: none;
     border-radius: 6px;
     font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    animation: scaleIn 0.8s ease-out 0.8s;
-    opacity: 0;
-    animation-fill-mode: forwards;
 }
 
 .btn-secondary {
@@ -139,8 +142,22 @@ body {
     border: 1px solid #E9ECEF;
     border-radius: 6px;
     font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-request-access:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background-color: #333;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background-color: #F8F9FA;
+    color: #000000;
+    text-decoration: none;
 }
 
 /* Search Section Styles */
